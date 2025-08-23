@@ -7,7 +7,7 @@ collection: portfolio
 
 ## Project Overview
 
-The Robot has to follow the path of the Aruco Markers and traverse the whole marsyard. In the marsyard there would be objects sprinkled randomly which we need to identify and make a report of the whole mission. This statement is simpler to the actual problem statement. You can find more details as [Link].
+The Robot has to follow the path of the Aruco Markers and traverse the whole marsyard. In the marsyard there would be objects sprinkled randomly which we need to identify and make a report of the whole mission. This statement is simpler to the actual problem statement. You can find more details as [[Link](https://github.com/husarion/erc2025/blob/main/TECHNICAL_HANDBOOK.md)].
 
 ## Scope of Work
 
