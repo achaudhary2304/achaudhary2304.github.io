@@ -6,4 +6,4 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-Here's the pdf version 
+Here's the pdf version  
