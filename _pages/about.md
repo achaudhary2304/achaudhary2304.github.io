@@ -14,7 +14,7 @@ I am a Computer Science undergraduate at BITS Pilani, interested in deep learnin
 ### IBM Research · Research Intern
 **Algorithms and Applications Team · Bangalore, India · May – August 2026**
 
-Worked on neural eigensolvers and Transformer models for high-dimensional eigenvalue problems. Explored ways to make the solvers more efficient and stable, with the work accepted at the NeurIPS Sim2Science Workshop. Also contributed to an invention selected for patent filing.
+Worked on neural eigensolvers and Transformer models for high-dimensional eigenvalue problems. Explored ways to make the solvers more efficient and stable, with the work accepted at the NeurIPS Sim2Science Workshop. Also helped file a patent!
 
 ### Anitum · Computer Vision Intern
 **Remote · May – July 2025**
