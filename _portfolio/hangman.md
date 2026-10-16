@@ -12,17 +12,17 @@ collection: portfolio
 
 ## Overview
 
-This is the writeup for my attempt at the Hangman Challenge. To run the file you have to create an environment with torch. My strategy initially was to train using a RNN and then move on to LSTM. On the way I figured out ways to improve the accuracy more and more and make the whole thing better. The `train.py` script contains each and every thing required for the whole thing.
+This is a writeup of my attempt at the Hangman Challenge. To run the code, create an environment with PyTorch. I started with an RNN and then moved to an LSTM, refining the approach to improve accuracy. The `train.py` script contains the training pipeline.
 
 
 
 
 ## Data Preparation
 
-I create the Dataset to train the LSTM model using the following functions.
+I create the dataset to train the LSTM model using the following functions.
 
 ### Character Mapping
-First I create a char map to tokenize each and every character that can be present, from a to z and the PAD token and the _ token. So I have a char map of 28 things:
+First, I create a character map with 28 entries: the letters a–z, the PAD token, and the underscore token.
 
 ```python
 def mapping_chars():
@@ -41,8 +41,7 @@ This gives me:
 - _: 27 (for masked letters)
 
 ### Creating Training Pairs
-Then I read all the words in the txt file and create pairs out of them. I create pairs such as the actual original word, then the blank word and also an already guessed list.The limit was enforced because if not then the number of pairs grew at a exponential rate.
-Right now this only creates single _ words.
+I read the words from the text file and create training pairs containing the original word and a masked version. I limit the number of pairs per word to control dataset growth. This function masks one distinct letter at a time.
 
 ```python
 def create_pairs_limited(word: str, max_pairs: int = 10) -> List[Tuple[str, str]]:
@@ -63,8 +62,7 @@ For example, if I have the word "python":
 - Each pair: (masked_word, original_word)
 
 ### Contextual Simulation
-The reason I did was that earlier it used to always predict a and e and other high probabilty letters with the highest proab. but I had to filter all the tested letters so as to take the least one 
-This part is interesting so what I do is that I try to simulate the Hangman game and create true and false chances. All this is done to give the model context of what it had already tried so that it would not again give the same suggestion with high probability.
+Earlier versions repeatedly assigned high probabilities to common letters such as “a” and “e,” even after they had been guessed. I simulate correct and incorrect guesses to give the model context about previous attempts and help it avoid repeating suggestions.
 
 ```python
 def process_words_contextual(words: List[str], char_map: Dict[str, int], max_pairs_per_word: int = 5):
@@ -213,7 +211,7 @@ I use:
 - Batch size of 512
 - 15 epochs
 - Adam optimizer
-- BCELoss since it's a multi-label classification
+- BCELoss for multi-label classification
 
 ### Training Loop
 ```python
@@ -257,4 +255,4 @@ The script will:
 
 ## Results
 
- The contextual approach significantly improves performance compared to basic frequency-based methods by incorporating game state awareness and avoiding repeated incorrect guesses.trex
+ The contextual approach significantly improves performance compared to basic frequency-based methods by incorporating game state awareness and avoiding repeated incorrect guesses.
