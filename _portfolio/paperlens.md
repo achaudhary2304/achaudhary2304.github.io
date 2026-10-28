@@ -1,5 +1,5 @@
 ---
-title: "PaperLens"
+title: "PaperReader"
 excerpt: "A tool I made to ask questions, annotate, and organize my papers and slides."
 collection: portfolio
 permalink: /portfolio/paperlens/

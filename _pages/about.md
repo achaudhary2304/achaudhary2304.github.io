@@ -23,6 +23,6 @@ Worked on computer vision pipelines for depth estimation, segmentation, and pers
 
 ## Selected Projects
 
-I mostly make projects that I use myself. I was reading a lot of papers and kept switching to ChatGPT for small doubts, so I made [PaperLens](https://github.com/achaudhary2304/paperreader). It makes it easier to ask questions, annotate, and organize my papers and slides. The alternatives I found were either paid or missing features I wanted, so I made my own.
+I mostly make projects that I use myself. I was reading a lot of papers and kept switching to ChatGPT for small doubts, so I made [PaperReader](https://github.com/achaudhary2304/paperreader). It makes it easier to ask questions, annotate, and organize my papers and slides. The alternatives I found were either paid or missing features I wanted, so I made my own.
 
 I have also worked on autonomous rover navigation with CRISS Robotics. You can find my robotics writeups and other work in my [portfolio]({{ '/portfolio/' | relative_url }}).
